@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "5.10.1",
+    "npm": "3.8.3"
+  },
   "scripts": {
     "stylus": "stylus -u autoprefixer-stylus --compress ./src/style.styl -o ./dist/style.css",
     "pug": "pug ./src/index.pug -o ./dist/",
