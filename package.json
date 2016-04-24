@@ -2,7 +2,7 @@
   "name": "tv-ptogram",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js"
+  "main": "server.js",
   "scripts": {
     "stylus": "stylus -u autoprefixer-stylus --compress ./src/style.styl -o ./dist/style.css",
     "jade": "jade ./src/index.jade -o ./dist/",
