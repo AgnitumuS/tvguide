@@ -30,8 +30,6 @@ apiRouter.get("/programs", function(req, res) {
 });
 console.log(`Starting server on ${IP_ADDR}:${PORT}`);
 app.listen(PORT, IP_ADDR);
-//app.use("/api", apiRouter);
+app.use("/api", apiRouter);
 
-tvGuide.update(() => {
-    app.use("/api", apiRouter);
-});
+tvGuide.update();

@@ -17,7 +17,7 @@
     "watch-rollup": "nodemon --ext js --watch ./src/ --exec 'npm run rollup'",
     "watch": "npm run watch-pug & npm run watch-stylus & npm run watch-rollup",
     "start-watch": "npm run watch & npm run start",
-    "start": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 server.js"
+    "start": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 --expose-gc server.js"
   },
   "author": "",
   "license": "ISC",
