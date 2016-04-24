@@ -1,0 +1,163 @@
+.italic
+    font-style: italic
+
+#day-tabs
+    margin-bottom: 10px
+
+
+.multiselect-wrapper
+    margin-bottom: 10px
+
+    .btn-group
+        width: 100%
+
+        button
+            width: 100%
+            text-align: left
+
+            overflow: hidden
+            white-space: nowrap
+            display: block
+            text-overflow: ellipsis
+            b
+                position: absolute
+                right: 10px
+                margin-top: 10px
+        ul.multiselect-container
+            min-width: 100%
+
+#channels-select-wrapper
+
+    #channels-select
+        display: inline-block
+        width: 120px
+        margin-left: 10px
+
+    .btn-group
+
+        .input-group-addon
+            padding: 6px 12px
+
+        ul.multiselect-container
+            li
+                input[type=checkbox]
+                    vertical-align: middle
+
+            .multiselect-clear-filter
+                position: absolute
+                right: 5px
+                top: 0
+                bottom: 0
+                height: 14px
+                margin: auto
+                font-size: 14px
+                cursor: pointer
+                color: #ccc
+                z-index: 100
+                transition: color 0.5s
+
+                &:hover
+                    color: #555 !important
+
+
+input[type="radio"], input[type="checkbox"]
+    &:checked
+        &:after
+            border-color: white !important
+input[type="radio"]:checked:before
+    background-color: white !important
+
+
+img.channel-icon
+    channel-icon-size = 30px
+    max-height: channel-icon-size
+    max-width: channel-icon-size
+.channel-title
+    font-weight: bold
+    margin-left: 5px
+
+.category-icon
+    text-align: center
+    [class^="icon-"]
+        display: inline-block
+        margin-right: 5px
+        font-size: 15px
+        width: 16px
+
+.channel-panel-wrapper
+    @media(max-width:767px)
+        height: auto !important
+
+.panel.channel-panel
+    .channel-title
+        margin-left: 12px
+
+    table.timetable
+        tbody
+
+            border: 0
+
+            // mimic table-hover
+            &:hover
+                background-color: #f5f5f5
+            &:nth-child(even)
+                background-color: #f9f9f9
+
+            &.suppressed
+                color: lightgray
+                .age-restriction
+                    border: 3px solid lightpink !important
+
+            tr.accordion-toggle
+                cursor: pointer
+
+                th, td
+                    border-top: 1px solid #dddddd // override for first element
+
+                th
+                    width: 30px
+
+            tr.program-info-wrapper
+                td
+                    border-top: 0
+                    padding: 0
+
+                    .program-info
+                        padding: 0 8px 4px 8px
+
+                        .program-description
+                            @extends .italic
+                            font-size: 13px
+                            margin-top: 3px
+                            line-height: 1.2
+
+                        .program-category
+                            display: inline-block
+                            font-size: 12px
+                            font-weight: bold
+
+                            span
+                                vertical-align: middle
+                                display: inline-block
+
+                        .age-restriction
+                            width: 25px
+                            height: 25px
+                            border-radius: 50%
+                            font-size: 11px
+                            line-height: 22px
+                            text-align: center
+                            border: 3px solid red
+                            font-weight: bold
+
+    .panel-body.show-all-btn-wrapper
+        padding: 0
+    .panel-body.no-programs
+        padding: 5px
+
+.channel-panel.collapsed // hide more than 5 programs
+    tbody:nth-of-type(1n + 6)
+        display: none
+
+.collapsing
+    transition: none

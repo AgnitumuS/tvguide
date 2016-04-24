@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?5mlfib');
+    src:    url('fonts/icomoon.eot?5mlfib#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?5mlfib') format('truetype'),
+        url('fonts/icomoon.woff?5mlfib') format('woff'),
+        url('fonts/icomoon.svg?5mlfib#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-film2:before {
+    content: "\e900";
+}
+.icon-microscope:before {
+    content: "\f089";
+}
+.icon-film:before {
+    content: "\f008";
+}
+.icon-futbol-o:before {
+    content: "\f1e3";
+}
+.icon-soccer-ball-o:before {
+    content: "\f1e3";
+}
+.icon-child_care:before {
+    content: "\eb41";
+}
+.icon-info:before {
+    content: "\e901";
+}
+.icon-tv:before {
+    content: "\e903";
+}
+.icon-man-woman:before {
+    content: "\e902";
+}
+.icon-happy:before {
+    content: "\e904";
+}
+

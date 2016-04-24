@@ -1,0 +1,97 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title Телепрограмма
+
+        script(src="//code.jquery.com/jquery-2.2.2.min.js")
+        script(src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js")
+        script(src="//cdn.jsdelivr.net/jquery.visible/1.1.0/jquery.visible.min.js")
+
+        // bootstrap (paper theme)
+        link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/paper/bootstrap.min.css")
+        script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+
+        // bootstrap-multiselect
+        link(rel="stylesheet", href="//cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css")
+        script(src="//cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js")
+
+
+        script(src="/main.js")
+        link(rel="stylesheet", href="/style.css")
+        link(rel="stylesheet", href="/icons.css")
+
+    body
+
+        .container
+            .row
+                .col-xs-11
+                    h3 Телепрограмма
+
+            .row
+                .col-xs-12.col-sm-3.col-sm-push-6.multiselect-wrapper
+                    select.btn.btn-sm.btn-default.hidden#categories-select
+                .col-xs-12.col-sm-3.col-sm-push-6.multiselect-wrapper#channels-select-wrapper
+                    select.btn.btn-sm.btn-default.hidden#channels-select(multiple)
+                .col-xs-12.col-sm-6.col-sm-pull-6
+                    ul.nav.nav-tabs#day-tabs
+                        li.active(role="presentation")
+                            a(href='#', data-day="today") Сегодня, #[span#today-date]
+                        li(role="presentation")
+                            a(href='#', data-day="tomorrow") Завтра, #[span#tommorow-date]
+
+            #channels-wrapper
+
+
+            footer
+                hr
+                .row
+                    .col-xs-6
+                        h6 Разработка: #[a(href="http://github.com/MAD-GooZe") Алексей Гусев], 2016
+                    .col-xs-6
+                        h6.text-right Телепрограмма: #[a(href="http://www.teleguide.info/") teleguide.info]
+
+
+
+        .hidden // templates section
+
+            #no-program-description-template Описание передачи отсутствует.
+            #show-all-template Показать все..
+            #hide-template Скрыть..
+
+            #channel-template
+                .col-xs-12.col-sm-6.channel-panel-wrapper
+                    .panel.channel-panel.collapsed(data-channel-id="%CHANNEL_ID%")
+                        .panel-heading
+                            h4.panel-title
+                                img.channel-icon(data-src="%CHANNEL_ICON%")
+                                span.channel-title %CHANNEL_TITLE%
+                        table.table.timetable
+                        .panel-body.show-all-btn-wrapper
+                            a.btn.btn-link.form-control.show-all-btn
+                        .panel-body.no-programs
+                            .text-center.italic Нет программ
+
+            #category-option-template
+                span.category-icon
+                    span(class="%CATEGORY_ICON%")
+                | %CATEGORY_NAME%
+
+            table#program-template // wrap in table to be rendered properly in DOM
+                tbody
+                    tr.accordion-toggle(data-toggle="collapse", data-target="#%PROGRAM_DESC_ID%")
+                        th %PROGRAM_START%
+                        td %PROGRAM_TITLE%
+                    tr.program-info-wrapper
+                        td(colspan=2)
+                            .accordion-body.collapse(id="%PROGRAM_DESC_ID%")
+                                .program-info
+                                    .program-category
+                                        span.category-icon
+                                            span(class="%PROGRAM_CATEGORY_ICON%")
+                                        span %PROGRAM_CATEGORY%
+                                    .pull-right
+                                        .age-restriction %PROGRAM_AGE%+
+                                    .program-description %PROGRAM_DESCRIPTION%
