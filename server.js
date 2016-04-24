@@ -32,4 +32,4 @@ console.log(`Starting server on ${IP_ADDR}:${PORT}`);
 app.listen(PORT, IP_ADDR);
 app.use("/api", apiRouter);
 
-tvGuide.update();
+//tvGuide.update();
