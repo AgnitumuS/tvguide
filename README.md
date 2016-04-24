@@ -7,7 +7,7 @@
 * jQuery
   * [jquery.scrollTo](https://github.com/flesler/jquery.scrollTo) (прокрутка страницы до требуемого элемента)
   * [jquery-visible](https://github.com/customd/jquery-visible) (проверка наличия элемента во viewport)
-* [Bootstrap Multiselect](https://github.com/davidstutz/bootstrap-multiselect) (отрисовка красывых селекторов для выбора каналов и категрии передач)
+* [Bootstrap Multiselect](https://github.com/davidstutz/bootstrap-multiselect) (отрисовка красивых селекторов для выбора каналов и категрии передач)
 * Node.js + Express (бекенд)
 * Сборка фронтенда (выполняется с помощью npm-скриптов):
   * html собирается из [Jade](http://jade-lang.com/)
