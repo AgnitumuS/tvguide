@@ -10,7 +10,7 @@ app.use(express.static('dist'));
 
 const apiRouter = express.Router();
 
-const IP_ADDR = 'localhost';
+const IP_ADDR = '0.0.0.0';
 const PORT = process.env.port || process.env.PORT || 3000;
 
 
