@@ -14,7 +14,7 @@ const IP_ADDR = process.env.NODE_IP || 'localhost';
 const PORT = process.env.NODE_PORT || 3000;
 
 
-    apiRouter.get("/channels", function(req, res) {
+apiRouter.get("/channels", function(req, res) {
     res.json(tvGuide.channels);
 });
 
@@ -28,10 +28,11 @@ apiRouter.get("/programs", function(req, res) {
             .json({err: "Channel not found"});
     }
 });
-
-app.use("/api", apiRouter);
+console.log(`Starting server on ${IP_ADDR}:${PORT}`);
+app.listen(PORT, IP_ADDR);
+//app.use("/api", apiRouter);
 
 tvGuide.update(() => {
-    console.log(`Starting server on ${IP_ADDR}:${PORT}`);
-    app.listen(PORT, IP_ADDR);
+
+    app.use("/api", apiRouter);
 });
