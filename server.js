@@ -33,6 +33,5 @@ app.listen(PORT, IP_ADDR);
 //app.use("/api", apiRouter);
 
 tvGuide.update(() => {
-
     app.use("/api", apiRouter);
 });
