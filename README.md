@@ -10,7 +10,7 @@
 * [Bootstrap Multiselect](https://github.com/davidstutz/bootstrap-multiselect) (отрисовка красивых селекторов для выбора каналов и категрии передач)
 * Node.js + Express (бекенд)
 * Сборка фронтенда (выполняется с помощью npm-скриптов):
-  * html собирается из [Jade](http://jade-lang.com/)
+  * html собирается из [Pug](http://jade-lang.com/)(бывший Jade)
   * css - [Stylus](http://stylus-lang.com/) с [автопрефиксом](https://github.com/jenius/autoprefixer-stylus)
   * js - бандлер [rollup.js](http://rollupjs.org/) с компиляцией в es5 с помощью [Babel](https://babeljs.io/)
 

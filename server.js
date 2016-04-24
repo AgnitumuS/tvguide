@@ -10,8 +10,8 @@ app.use(express.static('dist'));
 
 const apiRouter = express.Router();
 
-const IP_ADDR = process.env.NODE_IP || 'localhost';
-const PORT = process.env.NODE_PORT || 3000;
+const IP_ADDR = 'localhost';
+const PORT = process.env.port || 3000;
 
 
 apiRouter.get("/channels", function(req, res) {
