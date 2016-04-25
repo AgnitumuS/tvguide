@@ -69,14 +69,6 @@ input[type="radio"]:checked:before
     background-color: white !important
 
 
-img.channel-icon
-    channel-icon-size = 30px
-    max-height: channel-icon-size
-    max-width: channel-icon-size
-.channel-title
-    font-weight: bold
-    margin-left: 5px
-
 .category-icon
     text-align: center
     [class^="icon-"]
@@ -90,8 +82,14 @@ img.channel-icon
         height: auto !important
 
 .panel.channel-panel
+
+    img.channel-icon
+        channel-icon-size = 30px
+        max-height: channel-icon-size
+        max-width: channel-icon-size
     .channel-title
         margin-left: 12px
+        font-weight: bold
 
     table.timetable
         table-layout: fixed
