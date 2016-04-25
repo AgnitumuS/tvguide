@@ -1,6 +1,11 @@
 .italic
     font-style: italic
 
+.overflow-ellipsis
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
 #day-tabs
     margin-bottom: 10px
 
@@ -12,13 +17,9 @@
         width: 100%
 
         button
+            @extends .overflow-ellipsis
             width: 100%
             text-align: left
-
-            overflow: hidden
-            white-space: nowrap
-            display: block
-            text-overflow: ellipsis
             b
                 position: absolute
                 right: 10px
@@ -93,6 +94,7 @@ img.channel-icon
         margin-left: 12px
 
     table.timetable
+        table-layout: fixed
         tbody
 
             border: 0
@@ -115,7 +117,13 @@ img.channel-icon
                     border-top: 1px solid #dddddd // override for first element
 
                 th
-                    width: 30px
+                    width: 45px
+
+                &.collapsed
+                    td
+                        @extends .overflow-ellipsis
+
+
 
             tr.program-info-wrapper
                 td

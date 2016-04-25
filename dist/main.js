@@ -181,7 +181,7 @@
         },
         categoryOption: function categoryOption(category) {
             return templates._CATEGORY_OPTION_TEMPLATE.mapReplace({
-                "%CATEGORY_NAME%": category == "general" ? "Все категории" : category,
+                "%CATEGORY_NAME%": category == "general" ? "Все категории передач" : category,
                 "%CATEGORY_ICON%": templates.categoryIcons[category] || templates.categoryIcons.general
             });
         }

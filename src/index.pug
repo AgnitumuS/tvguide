@@ -82,7 +82,7 @@ html(lang="en")
 
             table#program-template // wrap in table to be rendered properly in DOM
                 tbody
-                    tr.accordion-toggle(data-toggle="collapse", data-target="#%PROGRAM_DESC_ID%")
+                    tr.accordion-toggle.collapsed(data-toggle="collapse", data-target="#%PROGRAM_DESC_ID%")
                         th %PROGRAM_START%
                         td %PROGRAM_TITLE%
                     tr.program-info-wrapper
