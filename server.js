@@ -33,3 +33,4 @@ app.listen(PORT, IP_ADDR);
 app.use("/api", apiRouter);
 
 tvGuide.update();
+setInterval(tvGuide.update, 1000 * 60 * 60 * 2); // enable frequent updates from teleguide.info
