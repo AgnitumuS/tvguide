@@ -147,10 +147,8 @@ $(function () {
                 let $showAllBtn = $panel.find(".show-all-btn");
                 if (shownPrograms > 5) {
                     $showAllBtn.html(templates.SHOW_ALL);
-                    $showAllBtn.show();
-                } else {
-                    $showAllBtn.hide();
                 }
+                $showAllBtn.toggleClass("hidden", shownPrograms <= 5);
                 $panel.find(".no-programs").toggleClass("hidden", shownPrograms != 0);
             });
         }
