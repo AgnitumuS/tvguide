@@ -22,20 +22,3 @@
 поэтому я решил сделать для заргузки и проебразования их в JSON небольшой бекенд на Node.js.
 
 На фронтенде я ришил использовать Twitter Bootstrap (большое число готовых компонентов и работа на мобильных из коробки) и jQuery.
-
-
-
-
-
-
-
-table-striped переделан чтобы скрытые tr  не влияли
-
-
-multi-select x btn
-http://stackoverflow.com/questions/20062218/how-do-i-clear-a-search-box-with-an-x-in-bootstrap-3
-
-
-
-table-collapse
-http://stackoverflow.com/questions/16389775/twitter-bootstrap-use-collapse-js-on-table-cells-almost-done
